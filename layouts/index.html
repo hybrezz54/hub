@@ -1,0 +1,50 @@
+{{ partial "header.html" . }}
+
+<div id="content" class="container-fluid">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="row buffer">
+                <div class="col-md-12">
+                    {{ partial "about.html" . }}
+                </div>
+            </div>
+    
+            <!-- Another section -->
+            <div class="row buffer">
+                {{ partial "section.html" . }}
+            </div>
+    
+            <!-- Extra content -->
+            <div class="row buffer">
+                <div class="col-md-12">
+                    {{ partial "extra.html" . }}
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-5">
+            <!-- widget -->
+            <div class="row buffer">
+                <div class="col-md-12">
+                    {{ partial "widget.html" . }}
+                </div>
+            </div>
+    
+            <!-- sidebar -->
+            <div class="row buffer">
+                <div class="col-md-12">
+                    {{ partial "sidebar.html" . }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- resources -->
+    <div class="row">
+        <div class="col-md-12">
+            {{ partial "resources.html" . }}
+        </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
