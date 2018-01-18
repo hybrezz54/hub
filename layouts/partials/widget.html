@@ -1,10 +1,9 @@
+{{ with .Site.Params.widget }}
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">
-            {{ .Site.Params.widget.title }}
+            {{ .title }}
         </h5>
-
-        <script src="//www.powr.io/powr.js?external-type=html"></script> 
-        <div class="powr-countdown-timer" id="cef3c7c1_1515944305" style="margin-bottom: -45px;"></div>
     </div>
 </div>
+{{ end }}

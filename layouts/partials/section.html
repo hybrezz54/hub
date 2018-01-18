@@ -1,11 +1,5 @@
+{{ with .Site.Params.section }}
 <div class="col">
-    <p class="text-center">
-        Button 1
-    </p>
+    {{ .title }}
 </div>
-
-<div class="col">
-    <p class="text-center">
-        Button 2
-    </p>
-</div>
+{{ end }}

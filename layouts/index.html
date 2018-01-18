@@ -3,48 +3,61 @@
 <div id="content" class="container-fluid">
     <div class="row">
         <div class="col-md-7">
+            <!-- About section -->
+            {{ if .Site.Params.about.enable }}
             <div class="row buffer">
                 <div class="col-md-12">
                     {{ partial "about.html" . }}
                 </div>
             </div>
+            {{ end }}
     
             <!-- Another section -->
+            {{ if .Site.Params.section.enable }}
             <div class="row buffer">
                 {{ partial "section.html" . }}
             </div>
+            {{ end }}
     
             <!-- Extra content -->
+            {{ if .Site.Params.extra.enable }}
             <div class="row buffer">
                 <div class="col-md-12">
                     {{ partial "extra.html" . }}
                 </div>
             </div>
+            {{ end }}
         </div>
     
         <div class="col-md-5">
             <!-- widget -->
+            {{ if .Site.Params.widget.enable }}
             <div class="row buffer">
                 <div class="col-md-12">
                     {{ partial "widget.html" . }}
                 </div>
             </div>
+            {{ end }}
     
             <!-- sidebar -->
+            {{ if .Site.Params.sidebar.enable }}
             <div class="row buffer">
                 <div class="col-md-12">
                     {{ partial "sidebar.html" . }}
                 </div>
             </div>
+            {{ end }}
         </div>
     </div>
 
     <!-- resources -->
+    {{ if .Site.Params.resources.enable }}
     <div class="row">
         <div class="col-md-12">
             {{ partial "resources.html" . }}
         </div>
     </div>
+    {{ end }}
 </div>
 
 {{ partial "footer.html" . }}

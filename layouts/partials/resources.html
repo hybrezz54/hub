@@ -1,17 +1,9 @@
+{{ with .Site.Params.resources }}
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">
-            Resources
+            {{ .title }}
         </h5>
-
-        <div class="row">
-            <div class="col">
-                List 1
-            </div>
-
-            <div class="col">
-                List 2
-            </div>
-        </div>
     </div>
 </div>
+{{ end }}
