@@ -7,6 +7,9 @@
         <title> {{ .Site.Title }} </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        {{ if isset .Site.Params "css" }}
+        <link rel="stylesheet" href="{{ .Site.Params.css }}">
+        {{ end }}
     </head>
     
     <body>
@@ -21,15 +24,11 @@
             <!-- nav items -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
+                    {{ range .Site.Params.nav.item }}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.Params.nav.link1 }}"> {{ .Site.Params.nav.item1 }} </a>
+                        <a class="nav-link" href="{{ .link }}"> {{ .title }} </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.Params.nav.link2 }}"> {{ .Site.Params.nav.item2 }} </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.Params.nav.link3 }}">  {{ .Site.Params.nav.item3 }} </a>
-                    </li>
+                    {{ end }}
                 </ul>
             </div>
         </nav>
