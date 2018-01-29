@@ -10,6 +10,8 @@
         {{ if isset .Site.Params "css" }}
         <link rel="stylesheet" href="{{ .Site.Params.css }}">
         {{ end }}
+
+        {{ template "_internal/google_analytics_async.html" . }}
     </head>
     
     <body>
